@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integrity Dental Center | Dra. Cecilia Pimentel · Guayaquil</title>
+  <meta name="description" content="Clínica dental premium en Guayaquil, Ecuador. Especialistas en Prostodoncia, Implantes, Ortodoncia Invisible y Diseño de Sonrisa. Dra. Maria Cecilia Pimentel.">
+  <meta name="keywords" content="clínica dental Guayaquil, implantes dentales Ecuador, ortodoncia invisible, blanqueamiento dental, diseño de sonrisa, Cecilia Pimentel">
+  <meta property="og:title" content="Integrity Dental Center | Dra. Cecilia Pimentel">
+  <meta property="og:description" content="Transformamos sonrisas con tecnología de vanguardia y el más alto estándar de cuidado dental en Ecuador.">
+  <meta property="og:type" content="website">
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Dentist","name":"Integrity Dental Center","description":"Clínica dental premium en Guayaquil, Ecuador.","telephone":"+593979073890","email":"integritydentalcenter@gmail.com","url":"https://integritydental.ec","address":{"@type":"PostalAddress","streetAddress":"Km 2.5 Vía Samborondón, Edificio Diana Quintana, Piso 3","addressLocality":"Guayaquil","addressRegion":"Guayas","addressCountry":"EC"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"19:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday","Sunday"],"opens":"08:00","closes":"17:00"}]}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css?v=20260515b">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" data-cursor-root aria-hidden="true">
+    <span class="cursor-dot"></span>
+    <span class="cursor-ring"></span>
+  </div>
+
+  <!-- WhatsApp Float -->
+  <a href="https://api.whatsapp.com/message/JE3CM6AZT5DCH1?autoload=1&app_absent=0" class="wa-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-float__tip">¡Escríbenos!</span>
+  </a>
+
+  <!-- Chatbot -->
+  <div class="chatbot" id="chatbot">
+    <div class="chatbot-panel" id="chatbotPanel" role="dialog" aria-label="Asistente virtual" aria-hidden="true">
+      <div class="chatbot-header">
+        <div class="chatbot-header__info">
+          <div class="chatbot-header__avatar"><i class="fas fa-tooth"></i></div>
+          <div>
+            <p class="chatbot-header__name">Dental AI</p>
+            <span class="chatbot-header__status"><span class="chatbot-dot"></span>En línea</span>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbotClose" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="chatbot-body" id="chatbotBody" role="log" aria-live="polite"></div>
+      <div class="chatbot-footer">
+        <div class="chatbot-input-row">
+          <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escribe tu consulta..." maxlength="300" aria-label="Mensaje">
+          <button class="chatbot-send" id="chatbotSend" aria-label="Enviar"><i class="fas fa-paper-plane"></i></button>
+        </div>
+        <p class="chatbot-note">IA · <a href="#contacto">Contacto directo</a></p>
+      </div>
+    </div>
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Asistente virtual" aria-expanded="false">
+      <i class="fas fa-comment-dots chatbot-toggle__icon chatbot-toggle__icon--open"></i>
+      <i class="fas fa-times chatbot-toggle__icon chatbot-toggle__icon--close"></i>
+      <span class="chatbot-toggle__badge" id="chatbotBadge">1</span>
+    </button>
+  </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Volver al inicio"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#inicio" class="nav-logo" aria-label="Integrity Dental Center">
+        <img src="assets/img/logo.jpeg" alt="Integrity Dental Center" class="nav-logo__img">
+      </a>
+      <div class="nav-actions">
+        <a href="#contacto" class="btn btn-primary btn-sm">Agendar Cita</a>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menú" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+  <ul class="nav-menu" id="navMenu" role="navigation" aria-label="Menú principal">
+    <li><a href="#inicio"      class="nav-link active" data-section="inicio">Inicio</a></li>
+    <li><a href="#servicios"   class="nav-link" data-section="servicios">Servicios</a></li>
+    <li><a href="#casos"       class="nav-link" data-section="casos">Casos</a></li>
+    <li><a href="#cecilia"     class="nav-link" data-section="cecilia">Dra. Pimentel</a></li>
+    <li><a href="#testimonios" class="nav-link" data-section="testimonios">Reseñas</a></li>
+    <li><a href="#ubicacion"   class="nav-link" data-section="ubicacion">Ubicación</a></li>
+    <li><a href="#contacto"    class="nav-link" data-section="contacto">Contacto</a></li>
+    <li class="nav-cta-mobile"><a href="#contacto" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Agendar Cita</a></li>
+  </ul>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="inicio" aria-labelledby="heroTitle">
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1 class="hero-title reveal-up" id="heroTitle">Tu sonrisa,<br><em>nuestra pasión</em></h1>
+        <p class="hero-sub reveal-up">Especialistas en rehabilitación oral y estética dental de vanguardia. Tecnología, precisión y calidez en cada tratamiento.</p>
+        <div class="hero-actions reveal-up">
+          <a href="#contacto" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Agendar Cita</a>
+          <a href="#casos" class="btn btn-ghost btn-lg"><i class="fas fa-images"></i> Ver Resultados</a>
+        </div>
+        <div class="hero-stats reveal-up">
+          <div class="hero-stat">
+            <span class="hero-stat__n" data-count="6">0</span><span class="hero-stat__n">+</span>
+            <span class="hero-stat__l">Años</span>
+          </div>
+          <div class="hero-stat__div" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__n" data-count="4500">0</span><span class="hero-stat__n">+</span>
+            <span class="hero-stat__l">Pacientes</span>
+          </div>
+          <div class="hero-stat__div" aria-hidden="true"></div>
+          <div class="hero-stat">
+            <span class="hero-stat__n">4.9 <i class="fas fa-star" style="color:var(--gold);font-size:.85em"></i></span>
+            <span class="hero-stat__l">Calificación</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual reveal-right">
+        <div class="hero-media-slider" id="heroSlider">
+          <div class="hero-media-slide active" data-slide="0">
+            <img src="assets/img/cecilia-hero.webp" alt="Dra. Maria Cecilia Pimentel" fetchpriority="high" loading="eager">
+          </div>
+          <div class="hero-media-slide" data-slide="1">
+            <video muted loop playsinline><source src="assets/video/hero-video-1.mp4" type="video/mp4"></video>
+          </div>
+          <div class="hero-media-slide" data-slide="2">
+            <video muted loop playsinline><source src="assets/video/hero-video-2.mp4" type="video/mp4"></video>
+          </div>
+        </div>
+        <div class="hero-progress" aria-hidden="true">
+          <button class="hero-pbar active" data-idx="0" aria-label="Slide 1"></button>
+          <button class="hero-pbar" data-idx="1" aria-label="Slide 2"></button>
+          <button class="hero-pbar" data-idx="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="section" id="servicios" aria-labelledby="servTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Nuestros Tratamientos</span>
+        <h2 class="section-title" id="servTit">Servicios de <em>Excelencia</em></h2>
+        <p class="section-sub">Una gama completa de tratamientos odontológicos con los más altos estándares.</p>
+      </header>
+
+      <div class="services-slider" id="servicesSlider">
+        <!-- Slide 1 -->
+        <div class="service-slide active" data-slide="0">
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#F59E0B"><i class="fas fa-sun"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+          <div class="service-slide__content">
+            <span class="service-slide__num">01</span>
+            <h3 class="service-slide__title">Blanqueamiento Dental</h3>
+            <p class="service-slide__text">Sistema clínico profesional activado por luz LED. Hasta 10 tonos más claros en una sola sesión, sin dañar el esmalte. Resultados inmediatos, duraderos y completamente seguros.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="service-slide" data-slide="1">
+          <div class="service-slide__content">
+            <span class="service-slide__num">02</span>
+            <h3 class="service-slide__title">Implantes Dentales</h3>
+            <p class="service-slide__text">Implantes de titanio integrados al hueso con planificación quirúrgica 3D y cirugía guiada por computadora. La solución permanente más avanzada, natural y funcional para piezas perdidas.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#8B5CF6"><i class="fas fa-tooth"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="service-slide" data-slide="2">
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#10B981"><i class="fas fa-align-center"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+          <div class="service-slide__content">
+            <span class="service-slide__num">03</span>
+            <h3 class="service-slide__title">Ortodoncia Invisible</h3>
+            <p class="service-slide__text">Alineadores transparentes diseñados digitalmente a medida. Removibles, imperceptibles y cómodos. Corrige apiñamientos y mordidas sin brackets metálicos, manteniendo tu higiene al 100%.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="service-slide" data-slide="3">
+          <div class="service-slide__content">
+            <span class="service-slide__num">04</span>
+            <h3 class="service-slide__title">Carillas de Porcelana</h3>
+            <p class="service-slide__text">Láminas de porcelana de alta densidad que corrigen forma, tamaño, color y alineación en dos consultas. Fabricadas artesanalmente. Naturales, elegantes y duraderas por muchos años.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#D4AF37"><i class="fas fa-gem"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+        </div>
+        <!-- Slide 5 -->
+        <div class="service-slide" data-slide="4">
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#3B82F6"><i class="fas fa-shield-alt"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+          <div class="service-slide__content">
+            <span class="service-slide__num">05</span>
+            <h3 class="service-slide__title">Limpieza Dental Profunda</h3>
+            <p class="service-slide__text">Ultrasonido de última generación para eliminar sarro y biofilm en zonas inaccesibles. Incluye pulido con microabrasivo, flúor y revisión periodontal completa. Recomendada cada seis meses.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Slide 6 -->
+        <div class="service-slide" data-slide="5">
+          <div class="service-slide__content">
+            <span class="service-slide__num">06</span>
+            <h3 class="service-slide__title">Diseño de Sonrisa &amp; Coronas</h3>
+            <p class="service-slide__text">Diseño digital de sonrisa y coronas de cerámica CAD/CAM de alta resistencia. Rehabilitación integral que combina función perfecta con estética extraordinaria. Ve el resultado antes de comenzar.</p>
+            <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+          </div>
+          <div class="service-slide__visual">
+            <div class="service-slide__icon-wrap" style="--clr:#EC4899"><i class="fas fa-crown"></i></div>
+            <div class="service-slide__deco" aria-hidden="true"><div class="deco-ring r1"></div><div class="deco-ring r2"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="services-nav">
+        <button class="slider-btn" id="servPrev" aria-label="Servicio anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="slider-dots" id="servDots" role="tablist"></div>
+        <button class="slider-btn" id="servNext" aria-label="Siguiente servicio"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== CASOS ANTES/DESPUÉS ===== -->
+  <section class="section section--tinted" id="casos" aria-labelledby="casosTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Transformaciones Reales</span>
+        <h2 class="section-title" id="casosTit">Antes &amp; <em>Después</em></h2>
+        <p class="section-sub">Resultados reales de pacientes reales. Cada caso refleja nuestro compromiso con la excelencia clínica.</p>
+      </header>
+
+      <div class="casos-wrapper">
+
+        <!-- Set 0: Limpieza bucal y proceso de ortodoncia -->
+        <div class="casos-set active" data-set="0">
+          <div class="caso-split">
+            <div class="caso-split__info reveal-left">
+              <span class="caso-tipo">Tratamiento 01</span>
+              <h3 class="caso-titulo">Limpieza bucal y proceso de <em>Ortodoncia</em></h3>
+              <p class="caso-desc">Combinamos la limpieza bucal profunda con el proceso de ortodoncia invisible para una sonrisa sana y alineada. Un tratamiento integral que transforma salud y estética en una sola planificación.</p>
+              <ul class="caso-pasos">
+                <li><i class="fas fa-check-circle"></i> Limpieza profunda previa al inicio de ortodoncia</li>
+                <li><i class="fas fa-check-circle"></i> Colocación de alineadores transparentes</li>
+                <li><i class="fas fa-check-circle"></i> Seguimiento y ajuste del plan de tratamiento</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="caso-split__grid reveal-right">
+              <div class="caso-grid-img caso-grid-vid">
+                <video autoplay muted loop playsinline><source src="assets/video/caso-video-1.mp4" type="video/mp4"></video>
+                <span class="caso-grid-badge antes caso-badge-purple">ANTES</span>
+              </div>
+              <div class="caso-grid-img caso-grid-vid">
+                <video autoplay muted loop playsinline><source src="assets/video/caso-video-3.mp4" type="video/mp4"></video>
+                <span class="caso-grid-badge despues caso-badge-purple">DESPUÉS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Set 1: Implantes Dentales -->
+        <div class="casos-set" data-set="1">
+          <div class="caso-split">
+            <div class="caso-split__info reveal-left">
+              <span class="caso-tipo">Tratamiento 02</span>
+              <h3 class="caso-titulo">Implantes <em>Dentales</em></h3>
+              <p class="caso-desc">Rehabilitación oral completa para edentulismo parcial. Implantes de titanio integrados al hueso para una solución permanente de apariencia completamente natural.</p>
+              <ul class="caso-pasos">
+                <li><i class="fas fa-check-circle"></i> Planificación quirúrgica 3D</li>
+                <li><i class="fas fa-check-circle"></i> Colocación de implante de titanio</li>
+                <li><i class="fas fa-check-circle"></i> Corona definitiva de porcelana</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="caso-split__grid reveal-right">
+              <div class="caso-grid-img">
+                <img src="assets/img/implante-antes.webp" alt="Antes implante dental" loading="lazy">
+                <span class="caso-grid-badge antes caso-badge-purple">ANTES</span>
+              </div>
+              <div class="caso-grid-img">
+                <img src="assets/img/implante-despues.webp" alt="Después implante dental" loading="lazy">
+                <span class="caso-grid-badge despues caso-badge-purple">DESPUÉS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Set 2: Limpieza de Cálculo Dental -->
+        <div class="casos-set" data-set="2">
+          <div class="caso-split">
+            <div class="caso-split__info reveal-left">
+              <span class="caso-tipo">Tratamiento 03</span>
+              <h3 class="caso-titulo">Limpieza de <em>Cálculo Dental</em></h3>
+              <p class="caso-desc">El cálculo mineralizado solo puede ser eliminado por un profesional. Con ultrasonido de última generación retiramos los depósitos endurecidos, devolviendo la salud y la estética a tu sonrisa.</p>
+              <ul class="caso-pasos">
+                <li><i class="fas fa-check-circle"></i> Evaluación de depósitos de cálculo</li>
+                <li><i class="fas fa-check-circle"></i> Eliminación con ultrasonido profesional</li>
+                <li><i class="fas fa-check-circle"></i> Pulido y fluorización final</li>
+              </ul>
+              <a href="#contacto" class="btn btn-primary">Consultar <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="caso-split__grid reveal-right">
+              <div class="caso-grid-img">
+                <img src="assets/img/antes-3.jpg" alt="Antes limpieza de cálculo dental" loading="lazy">
+                <span class="caso-grid-badge antes caso-badge-purple">ANTES</span>
+              </div>
+              <div class="caso-grid-img">
+                <img src="assets/img/antes-1.jpg" alt="Después limpieza de cálculo dental" loading="lazy">
+                <span class="caso-grid-badge despues caso-badge-purple">DESPUÉS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="casos-nav reveal-up">
+        <button class="slider-btn" id="casosPrev" aria-label="Caso anterior"><i class="fas fa-chevron-left"></i></button>
+        <span class="casos-counter"><span id="casosCurrentNum">1</span> / <span id="casosTotalNum">3</span></span>
+        <button class="slider-btn" id="casosNext" aria-label="Caso siguiente"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== DRA. CECILIA ===== -->
+  <section class="section cecilia-section" id="cecilia" aria-labelledby="ceciliaTit">
+    <div class="container">
+      <div class="cecilia-wrap">
+        <div class="cecilia-visual reveal-left">
+          <div class="cecilia-photo-frame">
+            <img src="assets/img/cecilia-foto.jpg" alt="Dra. Maria Cecilia Pimentel" loading="lazy">
+          </div>
+          <div class="cecilia-video-thumb">
+            <video autoplay muted loop playsinline aria-hidden="true">
+              <source src="assets/video/cecilia-1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="cecilia-info reveal-up">
+          <span class="section-label">Fundadora &amp; CEO</span>
+          <h2 class="section-title cecilia-title" id="ceciliaTit">Dra. Maria Cecilia<br><span class="text-gold">Pimentel</span></h2>
+          <p class="cecilia-tagline"><em>"Creyente de que todo lo que haces de corazón se multiplica."</em></p>
+          <p class="cecilia-bio">Guayaquileña, docente universitaria y CEO de Integrity Dental Center. Especialista en Prostodoncia — Rehabilitación Oral y Estética Dental Avanzada, graduada en la <strong>Universidad de Guadalajara, México</strong>. Apasionada por la odontología y la educación, se compromete a cuidar cada sonrisa con lo mejor de su equipo, cada día.</p>
+          <ul class="cecilia-creds">
+            <li class="cecilia-cred">
+              <div class="cecilia-cred__ico"><i class="fas fa-graduation-cap"></i></div>
+              <div><strong>Especialista en Prostodoncia</strong><span>Rehabilitación Oral &amp; Estética Dental Avanzada</span></div>
+            </li>
+            <li class="cecilia-cred">
+              <div class="cecilia-cred__ico"><i class="fas fa-university"></i></div>
+              <div><strong>Universidad de Guadalajara, México</strong><span>Formación de excelencia internacional</span></div>
+            </li>
+            <li class="cecilia-cred">
+              <div class="cecilia-cred__ico"><i class="fas fa-chalkboard-teacher"></i></div>
+              <div><strong>Docente Universitaria</strong><span>Educación y odontología como vocación</span></div>
+            </li>
+          </ul>
+          <a href="#contacto" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Agendar con la Dra. Pimentel</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section class="section section--tinted" id="testimonios" aria-labelledby="testTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Lo Que Dicen Nuestros Pacientes</span>
+        <h2 class="section-title" id="testTit">Reseñas <em>Reales</em></h2>
+        <p class="section-sub">La voz de nuestros pacientes es nuestra mejor carta de presentación.</p>
+      </header>
+
+      <div class="reviews-screenshots reveal-up">
+        <div class="review-ss-item"><img src="assets/img/resena-1.jpg" alt="Reseña de paciente" loading="lazy"></div>
+        <div class="review-ss-item"><img src="assets/img/resena-2.jpg" alt="Reseña de paciente" loading="lazy"></div>
+        <div class="review-ss-item"><img src="assets/img/resena-3.png" alt="Reseña de paciente" loading="lazy"></div>
+      </div>
+
+      <div class="testi-grid">
+        <article class="testi-card reveal-up" style="--d:0s">
+          <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <blockquote class="testi-card__text">La Dra. Pimentel cambió mi vida con mis implantes. Llegué insegura de sonreír y salí con una confianza que no sentía desde hace años. El proceso fue totalmente indoloro y los resultados son increíbles.</blockquote>
+          <div class="testi-card__author"><div class="testi-card__avatar">LC</div><div><h4 class="testi-card__name">Laura Castillo</h4><span class="testi-card__treat">Implantes Dentales</span></div></div>
+        </article>
+        <article class="testi-card reveal-up" style="--d:.1s">
+          <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <blockquote class="testi-card__text">Tenía terror al dentista. La Dra. Pimentel fue tan paciente y cálida que no sentí nada durante el tratamiento. Salvó mi muela que otro dentista quería extraer. Ahora vengo sin miedo y recomiendo Integrity a toda mi familia.</blockquote>
+          <div class="testi-card__author"><div class="testi-card__avatar">JP</div><div><h4 class="testi-card__name">Jorge Pérez</h4><span class="testi-card__treat">Endodoncia</span></div></div>
+        </article>
+        <article class="testi-card reveal-up" style="--d:.2s">
+          <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <blockquote class="testi-card__text">El diseño de sonrisa fue transformador. Ver el resultado digital antes de empezar me dio total confianza. Mis carillas quedaron perfectas: naturales, luminosas y exactamente como las había soñado. La gente pregunta si son mis dientes naturales.</blockquote>
+          <div class="testi-card__author"><div class="testi-card__avatar">SR</div><div><h4 class="testi-card__name">Sofía Ramírez</h4><span class="testi-card__treat">Diseño de Sonrisa · Carillas</span></div></div>
+        </article>
+        <article class="testi-card reveal-up" style="--d:.3s">
+          <div class="testi-card__stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <blockquote class="testi-card__text">Los alineadores invisibles fueron perfectos. En 9 meses mis dientes quedaron perfectos y nadie en mi trabajo supo que usaba ortodoncia. El resultado superó todo lo que esperaba. ¡Totalmente recomendado!</blockquote>
+          <div class="testi-card__author"><div class="testi-card__avatar">MA</div><div><h4 class="testi-card__name">Miguel Álvarez</h4><span class="testi-card__treat">Ortodoncia Invisible</span></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== PACIENTES / CARRUSEL ===== -->
+  <section class="section clientes-section" id="clientes" aria-labelledby="clientesTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Historias Reales</span>
+        <h2 class="section-title" id="clientesTit">Experiencias que <em>Inspiran</em></h2>
+        <p class="section-sub">Cada video es una historia de transformación real de nuestros pacientes.</p>
+      </header>
+
+      <div class="clientes-slider" id="clientesSlider">
+        <!-- Slide 1 -->
+        <div class="clientes-slide active" data-slide="0">
+          <div class="clientes-slide__media">
+            <video autoplay muted loop playsinline><source src="assets/video/carrusel-2.mp4" type="video/mp4"></video>
+          </div>
+          <div class="clientes-slide__content">
+            <span class="clientes-slide__num">01</span>
+            <h3 class="clientes-slide__title">Pacientes de Todo el Mundo</h3>
+            <p class="clientes-slide__text">Recibimos pacientes de distintas nacionalidades que buscan atención especializada de excelencia. Su confianza es nuestro mayor logro y nuestra motivación diaria.</p>
+            <div class="clientes-slide__tags">
+              <span class="cliente-tag"><i class="fas fa-globe-americas"></i> Atención Internacional</span>
+              <span class="cliente-tag"><i class="fas fa-award"></i> Excelencia Clínica</span>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Agendar Cita <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="clientes-slide" data-slide="1">
+          <div class="clientes-slide__media">
+            <video muted loop playsinline><source src="assets/video/carrusel-3.mp4" type="video/mp4"></video>
+          </div>
+          <div class="clientes-slide__content">
+            <span class="clientes-slide__num">02</span>
+            <h3 class="clientes-slide__title">Experiencia Única en Cada Detalle</h3>
+            <p class="clientes-slide__text">Si valoras la excelencia en cada detalle, te esperamos en nuestra clínica de especialidades. Ubicados en el Km 2.5 Vía Samborondón, Edificio Diana Quintana.</p>
+            <div class="clientes-slide__tags">
+              <span class="cliente-tag"><i class="fas fa-star"></i> Especialistas</span>
+              <span class="cliente-tag"><i class="fas fa-map-marker-alt"></i> Samborondón</span>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Conocer Más <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="clientes-slide" data-slide="2">
+          <div class="clientes-slide__media">
+            <video muted loop playsinline><source src="assets/video/carrusel-1.mp4" type="video/mp4"></video>
+          </div>
+          <div class="clientes-slide__content">
+            <span class="clientes-slide__num">03</span>
+            <h3 class="clientes-slide__title">Tu Sonrisa, Nuestra Misión</h3>
+            <p class="clientes-slide__text">En Integrity Dental Center cada tratamiento nace de la pasión por transformar sonrisas. No hay lugar donde nuestro ser brille más que junto a nuestros pacientes.</p>
+            <div class="clientes-slide__tags">
+              <span class="cliente-tag"><i class="fas fa-heart"></i> Con Pasión</span>
+              <span class="cliente-tag"><i class="fas fa-smile"></i> Sonrisas Felices</span>
+            </div>
+            <a href="#contacto" class="btn btn-primary">Comenzar <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="clientes-nav reveal-up">
+        <button class="slider-btn" id="clientesPrev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+        <div class="clientes-dots" id="clientesDots"></div>
+        <button class="slider-btn" id="clientesNext" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== UBICACIÓN ===== -->
+  <section class="section" id="ubicacion" aria-labelledby="ubicTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Encuéntranos</span>
+        <h2 class="section-title" id="ubicTit">Nuestra <em>Ubicación</em></h2>
+        <p class="section-sub">Km 2.5 Vía Samborondón, Edificio Diana Quintana, Piso 3 · Guayaquil, Ecuador</p>
+      </header>
+      <div class="location-wrap">
+        <div class="location-media reveal-left">
+          <div class="location-video-slider" id="locationSlider">
+            <!-- Order: video 2 first (celular), video 3 second, video 1 third (elevator) -->
+            <div class="location-video-slide active" data-loc="0">
+              <video autoplay muted loop playsinline><source src="assets/video/ubicacion-2.mp4" type="video/mp4"></video>
+            </div>
+            <div class="location-video-slide" data-loc="1">
+              <video muted loop playsinline><source src="assets/video/ubicacion-3.mp4" type="video/mp4"></video>
+            </div>
+            <div class="location-video-slide" data-loc="2">
+              <video muted loop playsinline><source src="assets/video/ubicacion-1.mp4" type="video/mp4"></video>
+            </div>
+          </div>
+          <div class="location-video-controls">
+            <button class="slider-btn" id="locPrev" aria-label="Video anterior"><i class="fas fa-chevron-left"></i></button>
+            <div class="location-video-nav">
+              <button class="loc-dot active" data-loc="0"></button>
+              <button class="loc-dot" data-loc="1"></button>
+              <button class="loc-dot" data-loc="2"></button>
+            </div>
+            <button class="slider-btn" id="locNext" aria-label="Video siguiente"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div class="location-info reveal-up">
+          <ul class="location-details">
+            <li class="location-detail">
+              <div class="location-detail__ico"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Dirección</strong><span>Km 2.5 Vía Samborondón<br>Edificio Diana Quintana, Piso 3</span></div>
+            </li>
+            <li class="location-detail">
+              <div class="location-detail__ico"><i class="fas fa-phone-alt"></i></div>
+              <div><strong>Teléfono / WhatsApp</strong><span><a href="tel:+593979073890">+593 97 907 3890</a></span></div>
+            </li>
+            <li class="location-detail">
+              <div class="location-detail__ico"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email</strong><span><a href="mailto:integritydentalcenter@gmail.com">integritydentalcenter@gmail.com</a></span></div>
+            </li>
+            <li class="location-detail">
+              <div class="location-detail__ico"><i class="fas fa-clock"></i></div>
+              <div><strong>Horarios</strong><span>Lun – Vie: 9:00am – 7:00pm<br>Sáb y Dom: 8:00am – 5:00pm</span></div>
+            </li>
+          </ul>
+          <div class="location-social">
+            <a href="https://www.instagram.com/integritydentalcenter/" target="_blank" rel="noopener" class="loc-soc-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/IntegrityDentalCenter.ec/photos" target="_blank" rel="noopener" class="loc-soc-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://api.whatsapp.com/message/JE3CM6AZT5DCH1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="loc-soc-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <a href="#contacto" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Agenda Tu Cita</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true"></div>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section section--tinted" id="contacto" aria-labelledby="contTit">
+    <div class="container">
+      <header class="section-header reveal-up">
+        <span class="section-label">Agenda Tu Consulta</span>
+        <h2 class="section-title" id="contTit">Comienza Tu <em>Transformación</em></h2>
+        <p class="section-sub">Da el primer paso hacia la sonrisa que siempre soñaste.</p>
+      </header>
+      <div class="contact-form-box reveal-up">
+        <form id="contactForm" class="contact-form" novalidate aria-label="Formulario de cita">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre Completo <span aria-hidden="true">*</span></label>
+              <input type="text" id="nombre" name="nombre" class="form-ctrl" placeholder="Tu nombre completo" required autocomplete="name">
+              <span class="form-err" id="err-nombre" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">Correo Electrónico <span aria-hidden="true">*</span></label>
+              <input type="email" id="email" name="email" class="form-ctrl" placeholder="tu@email.com" required autocomplete="email">
+              <span class="form-err" id="err-email" role="alert"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono">Teléfono / WhatsApp <span aria-hidden="true">*</span></label>
+            <input type="tel" id="telefono" name="telefono" class="form-ctrl" placeholder="+593 97 907 3890" required autocomplete="tel">
+            <span class="form-err" id="err-telefono" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="servicio">Servicio de Interés <span aria-hidden="true">*</span></label>
+            <select id="servicio" name="servicio" class="form-ctrl form-select" required>
+              <option value="" disabled selected>Selecciona un servicio</option>
+              <option>Blanqueamiento Dental</option>
+              <option>Implantes Dentales</option>
+              <option>Ortodoncia Invisible</option>
+              <option>Carillas de Porcelana</option>
+              <option>Limpieza Dental Profesional</option>
+              <option>Coronas Dentales</option>
+              <option>Diseño de Sonrisa</option>
+              <option>Consulta General</option>
+            </select>
+            <span class="form-err" id="err-servicio" role="alert"></span>
+          </div>
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="fecha">Fecha Preferida</label>
+              <input type="date" id="fecha" name="fecha" class="form-ctrl">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mensaje">Mensaje Adicional</label>
+              <textarea id="mensaje" name="mensaje" class="form-ctrl form-textarea" placeholder="Cuéntanos más..." rows="3"></textarea>
+            </div>
+          </div>
+          <div class="form-group form-check-group">
+            <label class="form-check-label">
+              <input type="checkbox" id="privacidad" name="privacidad" class="form-check-input" required>
+              <span class="form-check-box" aria-hidden="true"></span>
+              <span>Acepto la <a href="#" class="text-gold" onclick="event.preventDefault();document.getElementById('privacyModal').showModal()">Política de Privacidad</a> <span aria-hidden="true">*</span></span>
+            </label>
+            <span class="form-err" id="err-privacidad" role="alert"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-xl btn-full" id="submitBtn">
+            <span class="btn-txt"><i class="fas fa-calendar-check"></i> Agendar Mi Cita</span>
+            <span class="btn-spin" hidden><i class="fas fa-spinner fa-spin"></i> Enviando...</span>
+          </button>
+          <div class="form-response" id="formResponse" role="alert" aria-live="polite" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" aria-label="Pie de página">
+    <div class="footer__inner">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__col">
+            <img src="assets/img/logo.jpeg" alt="Integrity Dental Center" class="footer__logo-img">
+            <p class="footer__about">6 años de experiencia transformando sonrisas con tecnología de vanguardia y el más alto nivel de atención dental en Guayaquil, Ecuador.</p>
+            <div class="footer__social">
+              <a href="https://www.instagram.com/integritydentalcenter/" target="_blank" rel="noopener" class="footer__soc-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.facebook.com/IntegrityDentalCenter.ec/photos" target="_blank" rel="noopener" class="footer__soc-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://api.whatsapp.com/message/JE3CM6AZT5DCH1?autoload=1&app_absent=0" target="_blank" rel="noopener" class="footer__soc-link" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Servicios</h4>
+            <ul class="footer__links">
+              <li><a href="#servicios">Blanqueamiento Dental</a></li>
+              <li><a href="#servicios">Implantes Dentales</a></li>
+              <li><a href="#servicios">Ortodoncia Invisible</a></li>
+              <li><a href="#servicios">Carillas de Porcelana</a></li>
+              <li><a href="#servicios">Diseño de Sonrisa</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__heading">Contacto</h4>
+            <ul class="footer__contact">
+              <li><i class="fas fa-map-marker-alt"></i><span>Km 2.5 Vía Samborondón, Edificio Diana Quintana, Piso 3</span></li>
+              <li><i class="fas fa-phone-alt"></i><a href="tel:+593979073890">+593 97 907 3890</a></li>
+              <li><i class="fas fa-envelope"></i><a href="mailto:integritydentalcenter@gmail.com">integritydentalcenter@gmail.com</a></li>
+              <li><i class="fas fa-clock"></i><span>Lun–Vie: 9am–7pm · Sáb–Dom: 8am–5pm</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container footer__bottom-inner">
+        <p>&copy; 2026 Integrity Dental Center · Dra. Maria Cecilia Pimentel</p>
+        <div class="footer__bottom-links">
+          <a href="#" onclick="event.preventDefault();document.getElementById('privacyModal').showModal()">Política de Privacidad</a>
+          <a href="#" onclick="event.preventDefault();document.getElementById('privacyModal').showModal()">Términos de Servicio</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== PRIVACY MODAL ===== -->
+  <dialog id="privacyModal" class="privacy-modal" aria-label="Política de Privacidad" aria-modal="true">
+    <div class="privacy-modal__inner">
+      <button class="privacy-modal__close" onclick="document.getElementById('privacyModal').close()" aria-label="Cerrar">&times;</button>
+      <h2 class="privacy-modal__title">Política de Privacidad</h2>
+      <div class="privacy-modal__body">
+        <p><strong>Integrity Dental Center</strong> se compromete a proteger la privacidad de sus pacientes y usuarios.</p>
+        <h3>1. Datos que recopilamos</h3>
+        <p>Al completar el formulario de cita recopilamos: nombre completo, correo electrónico, teléfono/WhatsApp y servicio de interés.</p>
+        <h3>2. Finalidad</h3>
+        <p>Sus datos se utilizan exclusivamente para gestionar su solicitud de cita, enviarle confirmaciones y brindarle atención personalizada.</p>
+        <h3>3. Compartición</h3>
+        <p>No vendemos ni compartimos su información con terceros. Sus datos permanecen dentro de los sistemas de la Clínica.</p>
+        <h3>4. Conservación</h3>
+        <p>Los datos se conservan durante el tiempo necesario para la prestación del servicio y conforme a la legislación ecuatoriana vigente.</p>
+        <h3>5. Sus derechos</h3>
+        <p>Puede solicitar acceso, rectificación o eliminación de sus datos escribiendo a <a href="mailto:integritydentalcenter@gmail.com">integritydentalcenter@gmail.com</a>.</p>
+        <h3>6. Contacto</h3>
+        <p><a href="mailto:integritydentalcenter@gmail.com">integritydentalcenter@gmail.com</a> &nbsp;·&nbsp; +593 97 907 3890</p>
+      </div>
+    </div>
+  </dialog>
+
+  <script defer src="lib/gsap.min.js"></script>
+  <script defer src="lib/ScrollTrigger.min.js"></script>
+  <script defer src="js/main.js?v=20260515e"></script>
+</body>
+</html>
