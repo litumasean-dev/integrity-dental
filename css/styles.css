@@ -1673,35 +1673,45 @@ p { text-wrap:pretty; }
 }
 
 /* =============================================================
-   31. Refinamiento PC — espaciados estables, sin layout shift
+   31. Refinamiento PC — todo más compacto y elegante
    ============================================================= */
 @media (min-width:1025px) {
-  /* Nav — evitar wrap en links */
-  .nav-link { font-size: .7rem; padding: .4rem .5rem; letter-spacing: .3px; white-space: nowrap; }
+  /* Escala base más pequeña */
+  html { font-size: 13px; }
+
+  /* Nav */
+  :root { --hh: 64px; }
+  .nav-link { font-size: .68rem; padding: .35rem .5rem; letter-spacing: .25px; white-space: nowrap; }
   .nav-menu { gap: 0; }
 
-  /* Secciones más compactas */
-  .section { padding: 52px 0; }
-  .section-header { margin-bottom: 2.5rem; }
+  /* Secciones */
+  .section { padding: 48px 0; }
+  .section-header { margin-bottom: 2rem; }
+  .section-title { font-size: clamp(1.3rem, 2.4vw, 1.8rem); }
+  .section-sub { font-size: .88rem; }
 
-  /* Hero — altura fija para evitar saltos al cambiar slide */
-  .hero-inner { gap: 2.5rem; padding: 2rem 0; }
-  .hero-media-slider { height: 420px; }
-  .hero-media-slide { height: 100%; aspect-ratio: unset; }
+  /* Hero */
+  .hero-inner { gap: 2.5rem; padding: 1.5rem 0; }
+  .hero-media-slider { height: 380px; }
+  .hero-media-slide { height: 100%; }
+  .hero-title { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+  .hero-sub { font-size: .9rem; }
 
-  /* Servicios — tamaño fijo, sin salto entre slides */
-  .service-slide { gap: 3rem; }
-  .service-slide__img-wrap { width: 280px; height: 320px; aspect-ratio: unset; background: none; }
+  /* Servicios */
+  .service-slide { gap: 2.5rem; }
+  .service-slide__img-wrap { width: 240px; height: 280px; aspect-ratio: unset; background: none; }
   .service-slide__img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .services-slider { min-height: 300px; }
 
-  /* Casos — altura fija para evitar salto al cambiar caso */
-  .caso-split { gap: 3rem; }
-  .caso-ba-frame { max-width: 100%; height: 480px; }
+  /* Casos */
+  .caso-split { gap: 2.5rem; }
+  .caso-ba-frame { max-width: 100%; height: 400px; }
   .caso-ba-half { min-height: unset; }
   .caso-ba-half img,
   .caso-ba-half video { object-fit: cover; object-position: center; width: 100%; height: 100%; }
 
   /* Dr. Juárez */
-  .cecilia-wrap { gap: 3.5rem; }
+  .cecilia-wrap { gap: 3rem; }
   .cecilia-photo-frame { aspect-ratio: 9/16; }
+  .cecilia-title { font-size: clamp(1.4rem, 2.5vw, 2rem); }
 }
