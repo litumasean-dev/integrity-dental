@@ -193,7 +193,7 @@ p { text-wrap:pretty; }
 .nav { display:flex; align-items:center; gap:1.5rem; height:100%; }
 
 .nav-logo { display:flex; align-items:center; flex-shrink:0; }
-.nav-logo__img { height:200px; width:auto; object-fit:contain; }
+.nav-logo__img { height:56px; width:auto; object-fit:contain; }
 
 .nav-menu { display:flex; align-items:center; gap:.1rem; position:fixed; top:0; left:50%; transform:translateX(-50%); height:var(--hh); z-index:1001; }
 .nav-link {
@@ -1673,25 +1673,35 @@ p { text-wrap:pretty; }
 }
 
 /* =============================================================
-   31. Dimensiones PC — 9:16 en hero/casos/Dr.Juárez | 3/4 en servicios
+   31. Refinamiento PC — espaciados estables, sin layout shift
    ============================================================= */
 @media (min-width:1025px) {
-  /* Hero inicio — portrait 9:16 */
-  .hero-media-slide { aspect-ratio: 9/16; height: auto; }
+  /* Nav — evitar wrap en links */
+  .nav-link { font-size: .7rem; padding: .4rem .5rem; letter-spacing: .3px; white-space: nowrap; }
+  .nav-menu { gap: 0; }
 
-  /* Casos — portrait 9:16 */
-  .caso-grid-img { aspect-ratio: 9/16; }
+  /* Secciones más compactas */
+  .section { padding: 52px 0; }
+  .section-header { margin-bottom: 2.5rem; }
 
-  /* Dr. Juárez — foto principal portrait 9:16 */
-  .cecilia-photo-frame { aspect-ratio: 9/16; }
+  /* Hero — altura fija para evitar saltos al cambiar slide */
+  .hero-inner { gap: 2.5rem; padding: 2rem 0; }
+  .hero-media-slider { height: 420px; }
+  .hero-media-slide { height: 100%; aspect-ratio: unset; }
 
-  /* Servicios — imagen completa a su tamaño natural */
-  .service-slide__img-wrap { width: 100%; height: auto; aspect-ratio: unset; background: none; }
-  .service-slide__img { width: 100%; height: auto; object-fit: unset; }
+  /* Servicios — tamaño fijo, sin salto entre slides */
+  .service-slide { gap: 3rem; }
+  .service-slide__img-wrap { width: 280px; height: 320px; aspect-ratio: unset; background: none; }
+  .service-slide__img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
-  /* Casos antes/después — imagen completa a su tamaño natural */
-  .caso-ba-frame { max-width: 100%; height: auto; }
+  /* Casos — altura fija para evitar salto al cambiar caso */
+  .caso-split { gap: 3rem; }
+  .caso-ba-frame { max-width: 100%; height: 480px; }
   .caso-ba-half { min-height: unset; }
   .caso-ba-half img,
-  .caso-ba-half video { object-fit: unset; width: 100%; height: auto; }
+  .caso-ba-half video { object-fit: cover; object-position: center; width: 100%; height: 100%; }
+
+  /* Dr. Juárez */
+  .cecilia-wrap { gap: 3.5rem; }
+  .cecilia-photo-frame { aspect-ratio: 9/16; }
 }
