@@ -193,7 +193,7 @@ p { text-wrap:pretty; }
 .nav { display:flex; align-items:center; gap:1.5rem; height:100%; }
 
 .nav-logo { display:flex; align-items:center; flex-shrink:0; }
-.nav-logo__img { height:48px; width:auto; object-fit:contain; }
+.nav-logo__img { height:200px; width:auto; object-fit:contain; }
 
 .nav-menu { display:flex; align-items:center; gap:.1rem; position:fixed; top:0; left:50%; transform:translateX(-50%); height:var(--hh); z-index:1001; }
 .nav-link {
@@ -222,7 +222,7 @@ p { text-wrap:pretty; }
 .nav-link:hover, .nav-link.active { color: var(--purple); }
 .nav-link:hover::after, .nav-link.active::after { transform: translateX(-50%) scaleX(1); }
 
-.nav-actions { display:flex; align-items:center; gap:1rem; flex-shrink:0; }
+.nav-actions { display:flex; align-items:center; gap:1rem; flex-shrink:0; margin-left:auto; }
 .nav-phone {
   display: flex; align-items:center; gap:.4rem;
   font-family: var(--fh); font-size:.78rem; font-weight:600;
@@ -786,7 +786,7 @@ p { text-wrap:pretty; }
 /* =============================================================
    14. Footer
    ============================================================= */
-.footer { background:linear-gradient(180deg,#111111 0%,#0F0F1E 100%); }
+.footer { background:linear-gradient(180deg,#111111 0%,#1A1500 100%); }
 .footer__inner { padding:72px 0 52px; }
 .footer__grid { display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:3rem; }
 
@@ -1039,6 +1039,7 @@ p { text-wrap:pretty; }
 }
 @media (max-width:960px) {
   :root { --hh:64px; }
+  .nav-logo__img { height:80px; }
   .hero-inner { grid-template-columns:1fr; gap:2.5rem; text-align:center; }
   .hero-text { align-items:center; }
   .hero-sub { max-width:100%; }
@@ -1055,6 +1056,7 @@ p { text-wrap:pretty; }
 }
 @media (max-width:720px) {
   :root { --hh:60px; }
+  .nav-logo__img { height:150px; }
   .section { padding:72px 0; }
   .nav-menu {
     position:fixed; top:var(--hh); left:0; right:0;
@@ -1639,13 +1641,15 @@ p { text-wrap:pretty; }
   color: #fff;
 }
 @media (max-width:960px) {
-  .caso-ba-frame { height: 480px; max-width: 100%; }
+  .caso-ba-frame { height: auto; max-width: 100%; }
+  .caso-ba-half img,
+  .caso-ba-half video { object-fit: unset; width: 100%; height: auto; }
 }
 @media (max-width:720px) {
-  .caso-ba-frame { height: 400px; }
+  .caso-ba-frame { height: auto; }
 }
 @media (max-width:540px) {
-  .caso-ba-frame { height: 360px; }
+  .caso-ba-frame { height: auto; }
 }
 
 /* =============================================================
@@ -1666,4 +1670,28 @@ p { text-wrap:pretty; }
 }
 @media (max-width:720px) {
   .footer__map iframe { height: 200px; }
+}
+
+/* =============================================================
+   31. Dimensiones PC — 9:16 en hero/casos/Dr.Juárez | 3/4 en servicios
+   ============================================================= */
+@media (min-width:1025px) {
+  /* Hero inicio — portrait 9:16 */
+  .hero-media-slide { aspect-ratio: 9/16; height: auto; }
+
+  /* Casos — portrait 9:16 */
+  .caso-grid-img { aspect-ratio: 9/16; }
+
+  /* Dr. Juárez — foto principal portrait 9:16 */
+  .cecilia-photo-frame { aspect-ratio: 9/16; }
+
+  /* Servicios — imagen completa a su tamaño natural */
+  .service-slide__img-wrap { width: 100%; height: auto; aspect-ratio: unset; background: none; }
+  .service-slide__img { width: 100%; height: auto; object-fit: unset; }
+
+  /* Casos antes/después — imagen completa a su tamaño natural */
+  .caso-ba-frame { max-width: 100%; height: auto; }
+  .caso-ba-half { min-height: unset; }
+  .caso-ba-half img,
+  .caso-ba-half video { object-fit: unset; width: 100%; height: auto; }
 }
