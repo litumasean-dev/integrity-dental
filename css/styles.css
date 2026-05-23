@@ -1692,7 +1692,7 @@ p { text-wrap:pretty; }
 
   /* Hero — portrait 3:4, sin barras, llena el contorno */
   .hero-inner { gap: 3rem; padding: 3rem 0; }
-  .hero-media-slider { height: auto; aspect-ratio: 3/4; max-height: 680px; }
+  .hero-media-slider { height: auto; aspect-ratio: 9/16; max-height: 680px; }
   .hero-media-slide { position: absolute; inset: 0; width: 100%; height: 100%; }
   .hero-media-slider { position: relative; }
   .hero-media-slide img,
