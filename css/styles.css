@@ -193,7 +193,7 @@ p { text-wrap:pretty; }
 .nav { display:flex; align-items:center; gap:1.5rem; height:100%; }
 
 .nav-logo { display:flex; align-items:center; flex-shrink:0; }
-.nav-logo__img { height:56px; width:auto; object-fit:contain; }
+.nav-logo__img { height:90px; width:auto; object-fit:contain; }
 
 .nav-menu { display:flex; align-items:center; gap:.1rem; position:fixed; top:0; left:50%; transform:translateX(-50%); height:var(--hh); z-index:1001; }
 .nav-link {
@@ -1692,7 +1692,7 @@ p { text-wrap:pretty; }
 
   /* Hero — grande pero que quepa en pantalla */
   .hero-inner { gap: 3rem; padding: 3rem 0; }
-  .hero-media-slider { height: calc(100vh - 160px); max-height: 520px; min-height: 360px; }
+  .hero-media-slider { height: calc(100vh - 100px); max-height: 640px; min-height: 420px; }
   .hero-media-slide { height: 100%; }
   .hero-title { font-size: clamp(2rem, 3.5vw, 3rem); }
   .hero-sub { font-size: .95rem; }
